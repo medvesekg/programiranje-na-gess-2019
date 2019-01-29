@@ -1,0 +1,48 @@
+
+/* p selektor se nanaša na vse <p> značke */
+p {
+    color: red;
+    font-size: 26px;
+}
+
+img {
+    width: 300px;
+}
+
+/* selektorji ki se začnejo z # se nanašajo na ID. Spodnji se nanaša na html element z ID-jem "kladivo" */
+#kladivo {
+    width: 90px;
+    border: 2px solid #5a18f4;
+   
+}
+
+#neki {
+    color: yellow;
+}
+
+/* selektorji ki se začnejo s . se nanašajo na class. Spodnji se nanaša na vse html elemente s classom "modra" */
+.modra {
+    color: rgb(90, 24, 244);
+}
+
+/* eno CSS pravilo ima lahko tudi več selektorjev. Ločimo jih z vejico */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-weight: 900;
+}
+
+
+body {
+    background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/09/22/15/lightning.jpg?w968h681");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+/* simbol * je selektor za vse elemente */
+* {
+    font-family: 'Roboto', Verdana, sans-serif;
+    color: white;
+}
+
