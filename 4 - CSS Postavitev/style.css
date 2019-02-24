@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.levi {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    background-color: #364a56;
+    padding: 10px 20px;
+}
+
+.desni {
+    float: right;
+    width: 75%;
+    height: 100%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.meni {
+    color: white;
+}
+
+.meni ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.meni li {
+    margin: 30px 0;
+}
+
+.plus {
+    float:right;
+}
+
+.glava {
+    background-color: #fc0;
+    height: 50px;
+}
+
+.glavna-slika {
+    height: 200px;
+    border: 1px solid #000;
+}
+
+.vsebina {
+    border: 1px solid #000;
+}
