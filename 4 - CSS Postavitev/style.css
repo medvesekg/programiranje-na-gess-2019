@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Open-sans", sans-serif;
 }
 
 html, body {
@@ -24,6 +25,7 @@ html, body {
 
 .logo img {
     width: 100%;
+    max-width: 180px;
 }
 
 .meni {
@@ -48,11 +50,25 @@ html, body {
     height: 50px;
 }
 
-.glavna-slika {
-    height: 200px;
-    border: 1px solid #000;
+.vsebina {
+    padding: 0 100px;
 }
 
-.vsebina {
-    border: 1px solid #000;
+
+.glavna-slika img {
+    width: 100%;
 }
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-weight: 300;
+    color: grey;
+    margin-top: 0;
+}
+
+
+
