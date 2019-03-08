@@ -1,0 +1,11 @@
+.row {
+    margin-bottom: 50px;
+}
+
+.glavni {
+    background-image: url("https://via.placeholder.com/500x300");
+}
+
+.progress-bar {
+    width: 50%;
+}
