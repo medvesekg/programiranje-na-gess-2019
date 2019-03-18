@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Meteoritox;
+    src: url("Meteoritox.otf");
+}
+
+body {
+    font-family: Verdana;
+}
+
+.jumbotron {
+
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("jumbo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+h1 {
+    font-family: Meteoritox;
+    color: white;
+    text-align: center;
+}
+
+.navbar-brand {
+    color: red !important;
+    font-size: 40px;
+}
+
+.meteoritox {
+    font-family: Meteoritox;
+}
+
+.lead {
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+
+.red {
+    color: red;
+}
+
+.card-icon {
+    text-align: center;
+}
+
+.card-icon i {
+    font-size: 40px;
+}
+
+.card {
+    text-align: center;
+    padding-top: 30px;
+    height: 300px;
+}
+
+video {
+    margin-top: 40px;
+  min-width: 100%;
+  object-fit: fill;
+}
