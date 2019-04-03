@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="function.js"></script>
+    <script>
+        
+
+        let randomNumber = randint(0, 100)
+
+        let guess = null
+        let n = 1
+
+        while(true) {
+            let guess = prompt("Izbral sem si število med 0 in 100. Ugibaj")
+
+            if(randomNumber == guess) {
+                alert("Pravilno. Potreboval si " + n +  " poskusov")
+                break
+            }
+            else if(guess > randomNumber) {
+                alert("Ni pravilno. Previsoko")
+            }
+            else if(guess < randomNumber) {
+                alert("Ni pravilno. Prenizko")
+            }
+
+            n++
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=	, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        function myFunction() {
+            document.write("Funkcija deluje!!")
+        }
+
+        function naslov(text, nivo) {
+
+            document.write("<h" + nivo + ">" + text + "</h" + nivo + ">")
+        }
+
+
+        naslov("Naslov 1", 1)
+        naslov("Še en naslov", 2)
+        naslov("Tretji naslov", 2)
+
+        function randint(min, max) {
+            let random = Math.floor(Math.random() * (max + 1 - min) + min)
+            return random
+        }
+
+        let a = randint(0, 100)
+
+        document.write(a)
+
+
+
+    </script>
+</body>
+</html>
