@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            transition: background-color 5s;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="moj-naslov">Vpiši in klikni</h1>
+    <p>Odstavek</p>
+    <button>Klikni me</button>
+    <input>
+    
+
+
+    <script>
+        
+        function changeBackground() {
+            let body = document.querySelector("body")  // Izberemo <body>
+            body.style.backgroundColor = "rgb(0, 255, 0)" // Določimo background-color za <body>
+        }
+
+        function changeTitle() {
+            let naslov = document.querySelector(".moj-naslov") // Izberemo element s classom .moj-naslov
+            let input = document.querySelector("input") // Izberemo vnosno polje
+        
+            naslov.innerHTML = input.value // Besedilo naslova nastavimo na vrednost vnosnega polja
+        }
+
+
+        // S funkcijo document.querySelector() lahko izberemo html element
+        // Funkciji kot argument podamo css selektor za želen element
+        let button = document.querySelector("button")
+
+        // S funkcijo addEventListener lahko povežemo našo kodo z dogodki na spletni strani
+        // addEventListener sprejme dva argumenta, prvi določa ime dogodka na katerega se želimo odzvati, v tem primeru 'click'
+        // Drugi določa funkcijo, ki se naj izvede ob dogodku, v tem primeru 'changeBackground' in 'changeTitle', ki smo ju definirali zgoraj
+        button.addEventListener("click", changeBackground)
+        button.addEventListener("click", changeTitle)
+
+        // Za seznam vseh možnih dogodkov na katere lahko vežemo svoje funkcije poglejte https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+
+    </script>
+</body>
+</html>
