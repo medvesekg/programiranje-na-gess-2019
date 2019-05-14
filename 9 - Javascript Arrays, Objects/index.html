@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input>
+    <button>
+        Klikni me
+    </button>
+    <p class="tekst">Tekst</p>
+
+    <script>
+        
+        function klikNaButton() {
+            let tekst = document.querySelector(".tekst")
+            
+            let vnos = document.querySelector('input').value
+
+            tekst.innerHTML = vnos
+            tekst.style.color = "red"
+        }
+
+        let button = document.querySelector('button')
+
+       //button.onclick = klikNaButton
+        button.addEventListener('click', klikNaButton)
+    </script>
+</body>
+</html>

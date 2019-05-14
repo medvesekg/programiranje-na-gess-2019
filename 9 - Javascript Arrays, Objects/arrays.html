@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+ 
+    </ul>
+
+    <script>
+    
+        // Array
+
+        let imena = ["Gregor", "Benjamin", "Patrik", "Danijel"]
+        
+        // Spreminjanje elementov arraya
+        imena[0] = "Grega"
+        
+
+        // Dodajanje elementov v array
+        imena.push("Darth Vader")
+        imena.push("Obi-wan Kenobi")
+        imena.push(1232647467)
+        imena.push(true)
+
+        // Odstranjanje elementov iz arrayja
+        // Prvo število je indeks kjer želimo brisati, drugo število je št elementov ki jih brišemo
+        imena.splice(4,1)
+
+        // Vstavljanje v poljuben položaj
+        imena.splice(1, 0, "Jar Jar")
+
+        /*
+        for(let i = 0; i < imena.length; i++) {
+            console.log(imena[i])
+        } 
+        */
+        
+        /*
+        for(let indeks in imena) {
+            console.log(imena[indeks])
+        }
+        */
+
+        for(let ime of imena) {
+            let ul = document.querySelector('ul')
+            ul.innerHTML += "<li>" + ime + "</li>"
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
