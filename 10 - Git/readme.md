@@ -9,12 +9,12 @@ Drugič: Na Github Pages objavi svojo osebno spletno stran. Naj vsebuje kakšno 
 1. Na githubu ustvari nov git repozitorji 
 
 
-![newrepo](1.png)
+![newrepo](1.PNG)
 
 2. Poimenuj ga {moje-uporabniško-ime}.github.io, kjer je {moje-uporabniško ime} ime s katerim si se prijavili na github. Vse ostalo pusti na privzetih nastavitvah
 
 
-![newrepo2](2.png)
+![newrepo2](2.PNG)
 
 
 3. Na svojem računalniku, v mapi kjer imaš datoteke za spletno stran zaženi te ukaze v sledečem vrstnem redu
