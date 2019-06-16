@@ -1,0 +1,9 @@
+.icon {
+    float: right;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#dodaj-input {
+    margin-top: 10px;
+}
