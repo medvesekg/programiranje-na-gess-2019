@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-4 text-center">
+                <h1>Weatherman</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title location"></h5>
+                        <img class="weather-icon" src="">
+                        <p class="temperature">
+                        </p>
+                        <div class="form-group">
+                            <input type="text" class="form-control search-location" placeholder="Vnesi mesto">
+                        </div>
+                        <button class="btn btn-block btn-primary search">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        
+        
+        function getTemperatureByLocation(location) {
+            getTemperature(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=bd4e6e73d55bd0a7f5b081b6656e05e9`)
+       
+        } 
+
+        function getTemperatureByCoordinates(lat, long) {
+            getTemperature(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=bd4e6e73d55bd0a7f5b081b6656e05e9`)
+      
+        }
+
+        function getTemperature(url) {
+            axios.get(url)
+                .then(function(response) {
+                    let location = response.data.name
+                    let temperature = Math.round(response.data.main.temp - 274)
+                    let icon = response.data.weather[0].icon
+
+                    document.querySelector('.temperature').innerHTML = temperature + '&deg;C'
+                    document.querySelector('.location').innerHTML = location
+                    document.querySelector('.weather-icon').src = `https://openweathermap.org/img/w/${icon}.png`
+                })
+                .catch(function(error) {
+                    let location = document.querySelector('.search-location').value
+                    document.querySelector('.search-location').classList.add('is-invalid')
+
+                    document.querySelector('.temperature').innerHTML = ""
+                    document.querySelector('.location').innerHTML = "Could not find " + location
+                    document.querySelector('.weather-icon').src = ""
+                })
+        }
+
+
+
+        document.querySelector('.search').onclick = function() {
+            let location = document.querySelector('.search-location').value
+            getTemperatureByLocation(location)
+        }
+
+
+
+        document.querySelector('.search-location').onkeydown = function(event) {
+            document.querySelector('.search-location').classList.remove('is-invalid')
+
+            if(event.key == 'Enter') {
+                let location = document.querySelector('.search-location').value
+                getTemperatureByLocation(location)
+            }
+        }
+        
+        
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+            let lat = position.coords.latitude
+            let long = position.coords.longitude
+            getTemperatureByCoordinates(lat, long)
+        })
+
+    </script>
+</body>
+</html>
